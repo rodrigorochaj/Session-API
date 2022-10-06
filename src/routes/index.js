@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.status(200).json({
-        message: 'foi porra'
+        message: 'funcionando'
     })
 })
 

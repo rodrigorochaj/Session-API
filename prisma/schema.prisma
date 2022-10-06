@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Cliente {
   id       Int     @id @default(autoincrement())
   email    String  @unique
   name     String?
@@ -23,6 +23,11 @@ model Post {
   title     String
   content   String?
   published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
+  author    Cliente @relation(fields: [authorId], references: [id])
   authorId  Int
+}
+
+model Teste {
+  id        Int    @id @default(autoincrement())
+  descricao String
 }
